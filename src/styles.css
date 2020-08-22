@@ -83,6 +83,10 @@ h2 {
   color: #80c7f7;
 }
 
+.source-code-link {
+  text-align: center;
+}
+
 #date {
   color: #80c7f7;
   font-size: 15px;

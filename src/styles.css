@@ -1,0 +1,89 @@
+hr {
+  border: 1px solid #092e47;
+  margin-top: 7px;
+}
+
+h2 {
+  color: #bbe1fa;
+  margin: 0px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.unit {
+  color: #bbe1fa;
+  font-size: 40px;
+  position: relative;
+  left: -30px;
+  bottom: -18px;
+}
+
+.wrapper {
+  max-width: 550px;
+  margin: 20px auto;
+  border: 5px solid #0f4c75;
+  background: #3282b8;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.location,
+.time {
+  position: relative;
+  font-size: 20px;
+  margin: 0em;
+  color: #062031;
+  font-weight: 500;
+}
+
+.time {
+  top: 15px;
+}
+
+.location {
+  bottom: 15px;
+  text-transform: capitalize;
+}
+
+.forecast {
+  text-align: center;
+}
+
+.forecast-emojis {
+  font-size: 40px;
+}
+
+.precipitation-humidity-wind {
+  color: #092e47;
+}
+
+.search-bar {
+  width: 68%;
+  margin: 10px 0 0 12px;
+}
+
+.current-temperature {
+  font-size: 80px;
+  color: #bbe1fa;
+}
+
+.current-emoji {
+  font-size: 85px;
+  position: relative;
+  left: 20px;
+}
+
+.day-of-the-week {
+  color: #050b2b;
+  font-weight: 500;
+}
+
+.forecast-temperatures {
+  color: #80c7f7;
+}
+
+#date {
+  color: #80c7f7;
+  font-size: 15px;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--search bar-->
+      <form>
+        <input
+          class="search-bar"
+          type="search"
+          placeholder=" search a city"
+          id="search"
+        />
+        <input type="submit" value="search" id="search-button" />
+        <input type="submit" value="current" id="current-button" />
+      </form>
+      <!--current temperature-->
+      <div class="container">
+        <span id="date">insert date here</span>
+        <div class="time">Currently</div>
+        <div class="row">
+          <div class="col-4 current-temperature">
+            <span id="temperature">27</span>°
+          </div>
+          <a href="#" class="unit" id="celcius">
+            C
+          </a>
+
+          <!-- <a href="#" class="unit" id="farenheit">
+            |F
+          </a> -->
+          <div class="col-6 current-emoji">
+            ☀️
+          </div>
+        </div>
+        <div class="location">In <span id="city">Paris</span></div>
+        <!--precipitation, humidity and wind-->
+        <div class="row precipitation-humidity-wind">
+          <div class="col-12" id="description">
+            Sunny
+          </div>
+          <div class="col-12" id="humidity">
+            Humidity 28%
+          </div>
+          <div class="col-12" id="windspeed">
+            Wind 5m/s
+          </div>
+        </div>
+        <!--Forecast-->
+        <div class="forecast">
+          <h2>Forecast</h2>
+          <hr />
+          <div class="row day-of-the-week">
+            <div class="col">
+              Mon.
+            </div>
+            <div class="col">
+              Tues.
+            </div>
+            <div class="col">
+              Wed.
+            </div>
+            <div class="col">
+              Thurs.
+            </div>
+            <div class="col">
+              Fri.
+            </div>
+          </div>
+          <div class="row forecast-temperatures">
+            <div class="col">
+              24° 17°
+            </div>
+            <div class="col">
+              25° 17°
+            </div>
+            <div class="col">
+              28° 17°
+            </div>
+            <div class="col">
+              32° 20°
+            </div>
+            <div class="col">
+              40° 20°
+            </div>
+          </div>
+          <div class="row forecast-emojis">
+            <div class="col">
+              🌤
+            </div>
+            <div class="col">
+              🌤
+            </div>
+            <div class="col">
+              ☀️
+            </div>
+            <div class="col">
+              ☀️
+            </div>
+            <div class="col">
+              🌤
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>

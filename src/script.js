@@ -45,7 +45,14 @@ function showCurrentTemperature(response) {
   let wind = Math.round(response.data.wind.speed);
   let currentHumidity = response.data.main.humidity;
   let weatherDescription = response.data.weather["0"].description;
+  let icon = document.querySelector("#icon");
+  let iconCode = response.data.weather[0].icon;
 
+  icon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${iconCode}@2x.png`
+  );
+  icon.setAttribute("alt", weatherDescription);
   temperature.innerHTML = Math.round(response.data.main.temp);
   description.innerHTML = weatherDescription;
   humidity.innerHTML = `Humidity ${currentHumidity}%`;
@@ -70,7 +77,13 @@ function showPosition(response) {
   let wind = Math.round(response.data.wind.speed);
   let currentHumidity = response.data.main.humidity;
   let weatherDescription = response.data.weather["0"].description;
+  let iconCode = response.data.weather[0].icon;
 
+  icon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${iconCode}@2x.png`
+  );
+  icon.setAttribute("alt", weatherDescription);
   description.innerHTML = weatherDescription;
   humidity.innerHTML = `Humidity ${currentHumidity}%`;
   windspeed.innerHTML = `Wind ${wind}m/s`;
@@ -88,7 +101,13 @@ function showDefault(response) {
   let wind = Math.round(response.data.wind.speed);
   let currentHumidity = response.data.main.humidity;
   let weatherDescription = response.data.weather["0"].description;
+  let iconCode = response.data.weather[0].icon;
 
+  icon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${iconCode}@2x.png`
+  );
+  icon.setAttribute("alt", weatherDescription);
   description.innerHTML = weatherDescription;
   humidity.innerHTML = `Humidity ${currentHumidity}%`;
   windspeed.innerHTML = `Wind ${wind}m/s`;

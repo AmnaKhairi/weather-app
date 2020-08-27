@@ -68,10 +68,11 @@ h2 {
   color: #bbe1fa;
 }
 
-.current-emoji {
-  font-size: 85px;
+.current-emoji img {
+  height: 130px;
+  box-sizing: border-box;
   position: relative;
-  left: 20px;
+  left: -40px;
 }
 
 .day-of-the-week {

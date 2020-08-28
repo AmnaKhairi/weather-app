@@ -31,15 +31,15 @@ function searchCity(event) {
   axios.get(apiUrl).then(showCurrentTemperature);
 }
 
-/*function showFarenheit(event) {
+function showFarenheit(event) {
   event.preventDefault();
-  temperature.innerHTML = "66";
+  temperature.innerHTML = Math.round((celciusTemperature * 9) / 5 + 32);
 }
 
 function showCelcius(event) {
   event.preventDefault();
-  temperature.innerHTML = "27";
-}*/
+  temperature.innerHTML = Math.round(celciusTemperature);
+}
 
 function showCurrentTemperature(response) {
   let wind = Math.round(response.data.wind.speed);
@@ -47,7 +47,7 @@ function showCurrentTemperature(response) {
   let weatherDescription = response.data.weather["0"].description;
   let icon = document.querySelector("#icon");
   let iconCode = response.data.weather[0].icon;
-
+  celciusTemperature = response.data.main.temp;
   icon.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${iconCode}@2x.png`
@@ -78,6 +78,7 @@ function showPosition(response) {
   let currentHumidity = response.data.main.humidity;
   let weatherDescription = response.data.weather["0"].description;
   let iconCode = response.data.weather[0].icon;
+  celciusTemperature = response.data.main.temp;
 
   icon.setAttribute(
     "src",
@@ -102,6 +103,7 @@ function showDefault(response) {
   let currentHumidity = response.data.main.humidity;
   let weatherDescription = response.data.weather["0"].description;
   let iconCode = response.data.weather[0].icon;
+  celciusTemperature = response.data.main.temp;
 
   icon.setAttribute(
     "src",
@@ -127,14 +129,6 @@ let city = document.querySelector("#city");
 let searchButton = document.querySelector("#search-button");
 searchButton.addEventListener("click", searchCity);
 
-/*celcius to farenheit
-
-let temperature = document.querySelector("#temperature");
-let celcius = document.querySelector("#celcius");
-let farenheit = document.querySelector("#farenheit");
-farenheit.addEventListener("click", showFarenheit);
-celcius.addEventListener("click", showCelcius);
-*/
 //current button
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", handlePosition);
@@ -150,3 +144,11 @@ let temperature = document.querySelector("#temperature");
 if (search.value.length === 0) {
   Default();
 }
+
+//unit conversion
+let celcius = document.querySelector("#celcius");
+let celciusTemperature = null;
+celcius.addEventListener("click", showCelcius);
+
+let farenheit = document.querySelector("#farenheit");
+farenheit.addEventListener("click", showFarenheit);

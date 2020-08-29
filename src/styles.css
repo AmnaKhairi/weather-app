@@ -1,5 +1,5 @@
 hr {
-  border: 1px solid #092e47;
+  border: 1px solid #064e79;
   margin-top: 7px;
 }
 
@@ -23,7 +23,7 @@ h2 {
 .wrapper {
   max-width: 550px;
   margin: 20px auto;
-  border: 5px solid #07689f;
+  border: 4px solid #07689f;
   background: #40a8c4;
   padding: 15px;
   border-radius: 4px;

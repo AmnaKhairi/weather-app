@@ -23,8 +23,8 @@ h2 {
 .wrapper {
   max-width: 550px;
   margin: 20px auto;
-  border: 5px solid #0f4c75;
-  background: #3282b8;
+  border: 5px solid #07689f;
+  background: #40a8c4;
   padding: 15px;
   border-radius: 4px;
 }
@@ -98,6 +98,6 @@ h2 {
 }
 
 #date {
-  color: #80c7f7;
+  color: #bbe1fa;
   font-size: 15px;
 }

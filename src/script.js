@@ -129,7 +129,7 @@ function showDefault(response) {
   let weatherDescription = response.data.weather["0"].description;
   let iconCode = response.data.weather[0].icon;
   celciusTemperature = response.data.main.temp;
-
+  let icon = document.querySelector("#icon");
   icon.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${iconCode}@2x.png`

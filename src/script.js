@@ -144,18 +144,20 @@ function showDefault(response) {
 
 function showForecast(response) {
   let forecastElement = document.querySelector("#forecastElement");
-
+  forecastElement.innerHTML = "";
   for (let index = 0; index < 5; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
     <div class="col">
-    <div class="row forecast-time">${showForecastTime(forecast.dt * 1000)}</div>
-    <div class="row"><strong>${Math.round(
-      forecast.main.temp_max
-    )}°</strong>${Math.round(forecast.main.temp_min)}°</div>
-    <img class="row" id="icon" src="https://openweathermap.org/img/wn/${
-      forecast.weather[0].icon
-    }@2x.png" alt="">
+      <div class="row forecast-time forecast-text">${showForecastTime(
+        forecast.dt * 1000
+      )}</div>
+      <div class="row forecast-text"><strong>${Math.round(
+        forecast.main.temp_max
+      )}°</strong>${Math.round(forecast.main.temp_min)}°</div>
+      <img class="row forecast-icon" id="icon" src="https://openweathermap.org/img/wn/${
+        forecast.weather[0].icon
+      }@2x.png" alt="">
   </div>
   `;
   }

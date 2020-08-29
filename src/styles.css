@@ -90,6 +90,13 @@ h2 {
   text-align: center;
 }
 
+.forecast-text {
+  margin-left: 13px;
+}
+
+.forecast-icon {
+}
+
 #date {
   color: #80c7f7;
   font-size: 15px;
